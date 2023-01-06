@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="insetting">
+	<head>
+		<meta charset="UTF-8" />
+		<title>CSS clip-path Maker</title>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="style.min.css" />
+		<link rel="shortcut icon" href="pics/favicon.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="pics/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="pics/apple-touch-icon-152x152.png" />
+		<link rel="icon" sizes="196x196" href="homescreen-196x196.png" />
+		<meta name="viewport" content="width=device-width" />
+	</head>
+	<body>
+		<div class="main">
+			<header class="fade-content">
+				<a href="https://github.com/mehdiakram/css-clip-path-maker">CSS clip-path maker</a>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="mehdiakram">Tweet</a>
+				<script>!function(t,e,r){var n,s=t.getElementsByTagName(e)[0],i=/^http:/.test(t.location)?"http":"https";t.getElementById(r)||((n=t.createElement(e)).id=r,n.src=i+"://platform.twitter.com/widgets.js",s.parentNode.insertBefore(n,s))}(document,"script","twitter-wjs");</script>
+			</header>
+			<div class="demo-container fade-content">
+				<section class="demo">
+					<div id="box" class="box">
+						<div class="shadowboard"></div>
+						<div class="clipboard"></div>
+						<div class="handles"></div>
+					</div>
+					<div class="custom-notice">
+						<div>
+							<span class="touchy"></span> to add points<br>to custom polygon.
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="dark-panel custom">
+				<h2>Custom shape</h2>
+				<button class="finish"></button>
+			</section>
+			<section class="dark-panel inset">
+				<div class="flex">
+					<h2>Round edges</h2>
+					<input value="5% 20% 0 10%" class="inset-round" type="text" />
+				</div>
+				<p>
+					The <code>inset()</code> shape optionally allows values
+					similar to <code>border-radius</code> for rounded edges.
+					This new feature may be buggy in
+					<span class="your-browser">your browser</span>.
+				</p>
+			</section>
+			<section id="flickity" class="shapes horizontal gallery">
+				<ul></ul>
+			</section>
+			<section class="clip-path" tabindex="-1">
+				<div class="css-code code fade-content">
+					<code class="unprefixed block show">clip-path: <span class="functions"></span>;</code>
+				</div>
+			</section>
+		</div>
+		<div class="side">
+			<section class="grid panel ad-box">
+				<div class="beg">
+				<a href="https://partner.canva.com/c/2541788/1557527/10068" target="_top" id="1557527"><img src="//a.impactradius-go.com/display-ad/10068-1557527" border="0" alt="" width="300" height="250"/></a><img height="0" width="0" src="https://imp.pxf.io/i/2541788/1557527/10068" style="position:absolute;visibility:hidden;" border="0" />
+				</div>
+				<div class="beg">
+				<a href="https://namecheap.pxf.io/c/2541788/1448331/5618" target="_top" id="1448331"><img src="//a.impactradius-go.com/display-ad/5618-1448331" border="0" alt="" width="300" height="250"/></a><img height="0" width="0" src="https://namecheap.pxf.io/i/2541788/1448331/5618" style="position:absolute;visibility:hidden;" border="0" />
+				</div>
+				<div class="beg">
+				<a href="https://partners.inmotionhosting.com/c/2541788/274453/4222" target="_top" id="274453"><img src="//a.impactradius-go.com/display-ad/4222-274453" border="0" alt="" width="300" height="250"/></a><img height="0" width="0" src="https://partners.inmotionhosting.com/i/2541788/274453/4222" style="position:absolute;visibility:hidden;" border="0" />
+				</div>
+			</section>
+			
+			<section class="dark-panel inset">
+				<div class="flex">
+					<h2>Round edges</h2>
+					<input value="5% 20% 0 10%" class="inset-round" type="text" />
+				</div>
+				<p>
+					The <code>inset()</code> shape optionally allows values
+					similar to <code>border-radius</code> for rounded edges.
+					This new feature may be buggy in
+					<span class="your-browser">your browser</span>.
+				</p>
+			</section>
+			<section class="dark-panel custom">
+				<h2>Custom shape</h2>
+				<button class="finish"></button>
+			</section>
+			<section class="shapes vertical" tabindex="-1">
+				<ul></ul>
+			</section>
+			<section class="options">
+				<div class="grid panel flex fade-content">
+					<h2>Demo Size</h2>
+					<input id="demo_width" value="280" type="number" />
+					<h2>&times;</h2>
+					<input id="demo_height" value="280" type="number" />
+				</div>
+				<div class="grid panel fade-content">
+					<h2>Demo Background</h2>
+					<div class="backgrounds">
+						<img src="pics/pittsburgh.jpg" />
+						<img src="pics/fierenze.jpg" />
+						<img src="pics/sparkler.jpg" />
+						<img src="pics/miami.jpg" />
+					</div>
+					<input placeholder="Custom URL..." id="custom_url" type="url" name="background" />
+					<style id="custom_background"></style>
+					<div class="flex shadowboard-toggle">
+						<h2>Show outside clip-path</h2>
+						<input name="prefix" type="checkbox" id="shadowboard-toggle" />
+						<label class="joined" for="shadowboard-toggle"></label>
+					</div>
+				</div>
+				<div class="grid panel fade-content">
+					<h2>About Clip Paths</h2>
+					<p>The <code>clip-path</code> property allows you to make complex shapes in CSS by clipping an element to a basic shape (circle, ellipse, polygon, or inset), or to an SVG source.</p>
+					<p>CSS Animations and transitions are possible with two or more clip-path shapes with the same number of points.</p>
+				</div>
+				<div class="grid panel fade-content">
+					<h2>Browser Support</h2>
+					<p>Check out the current browser support for the <code>clip-path</code> property on <a href="http://caniuse.com/#search=clip-path">Can I Use</a>.</p>
+				</div>
+
+				
+				<div class="grid panel cite fade-content">
+					<h2 class="block">S M Mehdi Akram</h2>
+					<div class="twitter">
+						<a href="https://twitter.com/mehdiakram" class="twitter-follow-button" data-show-count="true">Follow @mehdiakram</a>
+					</div>
+					<p>Find this project on <a href="https://github.com/mehdiakram/css-clip-path-maker">Github</a>.</p>
+				</div>
+			</section>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="draggabilly.min.js"></script>
+		<script src="dev/flickity.pkgd.min.js"></script>
+		<script src="dev/clip.js"></script>
+		<script src="clip.min.js"></script>
+		<script src="custom.js"></script>
+	</body>
+</html>
